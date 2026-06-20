@@ -88,7 +88,7 @@ MLflow | Kubeflow | KServe | Prometheus | Grafana
 * Grafana
 * OpenTelemetry
 
----
+----
 
 ## Repository Structure
 
