@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.models import QuestionRequest
 
 app = FastAPI(
     title="Incident Intelligence Platform",
@@ -24,4 +25,11 @@ def health():
 def mintoo():
     return {
         "Name": "Hey! Its Mintoo"
+    }
+
+@app.post("/ask")
+def ask(request: QuestionRequest):
+
+    return {
+        "question_received": request.question
     }
