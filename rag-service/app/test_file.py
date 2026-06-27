@@ -1,11 +1,20 @@
 from pydantic import BaseModel
 
-class QuestionRequest(BaseModel):
-    question: str
+class Employee(BaseModel):
+    name: str
+    age: int
 
-req = QuestionRequest(
-    question="Kafka"
+emp = Employee(
+    name="Mintoo",
+    age=30
 )
 
-print(req.__dict__)
-print(req.model_dump())
+print(emp)
+print(emp.__dict__)
+print(emp.model_dump())
+print(emp.__annotations__)
+# print(emp)
+# print(emp.__dict__)
+# print(emp.model_dump())
+# print(Employee.__annotations__)
+#test
